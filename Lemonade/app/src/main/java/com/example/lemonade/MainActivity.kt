@@ -87,7 +87,7 @@ fun LemonadeApp(modifier: Modifier = Modifier) {
     Box(
         modifier
             .fillMaxSize()
-            .background(color = colorResource(R.color.white))) {
+            .background(Color.White)) {
 
         Row(verticalAlignment = Alignment.Top,horizontalArrangement = Arrangement.Center ) {
             Text(
