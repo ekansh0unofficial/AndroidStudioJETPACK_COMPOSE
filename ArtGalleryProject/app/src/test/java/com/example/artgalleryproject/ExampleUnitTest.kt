@@ -1,4 +1,4 @@
-package com.example.tiptimeproject
+package com.example.artgalleryproject
 
 import org.junit.Test
 

@@ -9,7 +9,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.annotation.VisibleForTesting
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -71,6 +73,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TipTimeLayout(modifier: Modifier = Modifier
     .fillMaxSize()
+   // .verticalScroll(rememberScrollState())
     ) {
 
     var amountInput by remember {
@@ -132,8 +135,8 @@ fun TipTimeLayout(modifier: Modifier = Modifier
 
     }
 }
-
-private fun calculateTip(roundUp: Boolean, amount: Double, tipPercent: Double ): String {
+@VisibleForTesting
+internal fun calculateTip(roundUp: Boolean, amount: Double, tipPercent: Double ): String {
     var tip = tipPercent * amount / 100
 
     if(roundUp){
