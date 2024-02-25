@@ -94,14 +94,9 @@ fun SubjectPlate(subject : SubjectDetails , modifier: Modifier = Modifier){
                             color = Color.White
 
                         )
-
-
                     }
                 }
-
-                
             }
-
     }
 }
 
